@@ -2,3 +2,5 @@ numpy
 scipy
 imutils
 opencv-contrib-python
+dlib
+cmake
