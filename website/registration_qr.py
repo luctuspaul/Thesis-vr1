@@ -13,7 +13,7 @@ os.makedirs(QR_FOLDER, exist_ok=True)
 def activate():
     token = str(uuid.uuid4())
 
-    register_url = f"http://127.0.0.1:5000/register/{token}"
+    register_url = f"http://localhost:5000/register/{token}"
 
     qr_filename = f"{token}.png"
     qr_full_path = os.path.join(QR_FOLDER, qr_filename)
@@ -29,7 +29,7 @@ def activate():
 # QR SCAN → AUTO REGISTER
 @app.route("/register/<token>")
 def register(token):
-    print(f"✅ Registered token: {token}")
+    print(f" Registered token: {token}")
     return "<h2>Registration Complete</h2>"
 
 if __name__ == "__main__":
