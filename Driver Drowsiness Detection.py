@@ -22,22 +22,15 @@ cap = cv2.VideoCapture(0)
 # ===============================
 # LANDMARK INDEXES
 # ===============================
-NOSE_TIP = 1
+EYE_AR_THRESH = 0.25
+MOUTH_AR_THRESH = 0.85
+EYE_AR_CONSEC_FRAMES = 3
 
-LEFT_EYE = [33, 160, 158, 133, 153, 144]
-RIGHT_EYE = [362, 385, 387, 263, 373, 380]
-MOUTH = [61, 291, 13, 14]
+FPS = 30
+YAWN_CONSEC_FRAMES = 3 * FPS
 
-# ===============================
-# DROWSINESS CONFIG
-# ===============================
-EAR_THRESHOLD = 0.16
-EAR_DANGER_THRESHOLD = 0.07
-EAR_TIME_THRESHOLD = 2.0
-
-YAWN_COUNT_THRESHOLD = 3
-YAWN_TIME_WINDOW = 120
-YAWN_RESET_TIME = 60
+COUNTER = 0
+YAWN_COUNTER = 0
 
 # ===============================
 # DISTRACTION CONFIG
